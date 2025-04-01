@@ -2,6 +2,10 @@
 
 A web application that analyzes food images using Google Cloud Vision API and suggests recipes using the Spoonacular API.
 
+## Live Demo
+
+Visit the application at: [https://kitchenapp-455317.uc.r.appspot.com](https://kitchenapp-455317.uc.r.appspot.com)
+
 ## Features
 
 - Upload food images (supports JPG, PNG, HEIC formats)
@@ -55,7 +59,7 @@ A web application that analyzes food images using Google Cloud Vision API and su
 
 ## Deployment
 
-The application is configured for deployment to Google App Engine:
+The application is deployed on Google App Engine:
 
 1. Update `env_variables.yaml` with your API keys
 2. Deploy using:
