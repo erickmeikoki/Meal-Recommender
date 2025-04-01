@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Food Image Analyzer</title>
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='css/main.css') }}"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			href="{{ url_for('static', filename='images/favicon.png') }}"
+		/>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Food Image Analyzer</h1>
+			<p>Upload a food image to get recipe suggestions</p>
+
+			<div class="upload-container">
+				<div class="upload-box">
+					<img
+						src="{{ url_for('static', filename='img/upload-icon.svg') }}"
+						alt="Upload"
+						class="upload-icon"
+					/>
+					<h2>Drag & Drop or Click to Upload</h2>
+					<p class="subtitle">Supported formats: JPG, PNG</p>
+					<input
+						type="file"
+						id="fileInput"
+						accept="image/*"
+						style="display: none"
+					/>
+					<button class="choose-photo-btn">Choose Photo</button>
+				</div>
+			</div>
+
+			<div class="loading">
+				<div class="spinner"></div>
+				<p>Analyzing your image...</p>
+			</div>
+
+			<div id="results">
+				<div class="detected-items">
+					<h2>Detected Food Items</h2>
+					<ul id="foodItems"></ul>
+				</div>
+
+				<div class="recipe-suggestions">
+					<h2>Recipe Suggestions</h2>
+					<div id="recipes"></div>
+				</div>
+			</div>
+		</div>
+
+		<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+	</body>
+</html>
